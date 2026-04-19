@@ -4,7 +4,7 @@
 
 
 //use cortex_m_rt::entry;
-use cortex_m_semihosting::heprintln;
+//use cortex_m_semihosting::heprintln;
 use panic_halt as _;
 // Print panic message to probe console
 use panic_probe as _;
@@ -59,7 +59,7 @@ mod app {
         let _ = db.set(key.clone, value);
 
         let answer = db.get(&key);
-        hprintln!("value: {:?}", answer);
+        cortex_m_semihosting::hprintln!("value: {:?}", answer);
 
         let _answer = db.delete(&key);
     }
