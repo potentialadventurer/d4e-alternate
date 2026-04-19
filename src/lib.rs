@@ -7,7 +7,7 @@ mod domain;
 mod test {
     use domain;
 
-    use crate::domain::kv_store::Value;
+    use crate::domain::kv_store::{KVStore, Database, Key, Value};
 
     #[test]
     fn test_insert() {
